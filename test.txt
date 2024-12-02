@@ -1,0 +1,39 @@
+; load data 
+set v 0 F0
+set v 1 90
+set v 2 F0
+set v 3 90
+set v 4 90
+set v 5 F0
+set v 6 F0
+set v 7 80
+set v 8 F0
+set v 9 80
+set v A F0
+set v B	F0
+set v C 90
+set v D F0
+set v E 90
+set v F 90
+setI 1000
+load F
+
+CLEARSCREEN ; Clear the screen
+setI 1000    ; 0x200 is the location of spritedata
+set v 0 0   
+set v 1 0
+
+; Draw first row of the logo
+display v 0 v 1 5
++= v 0 8 
+
+; Draw second row of the logo
+display v 1 v 1 5
++= v 0 8
+
+; Draw third row of the logo
+display v 2 v 1 5
+
+; Loop indefinitely
+waitinput
+
